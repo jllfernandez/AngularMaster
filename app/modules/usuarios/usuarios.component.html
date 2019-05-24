@@ -1,0 +1,20 @@
+<div class="container">
+  <app-toolbar [enlaces]="links"></app-toolbar>
+
+  <app-datatable
+    [columnas]="columnas"
+    [mostradas]="mostradas"
+    [dataSource]="dataSource"
+    [titulo]="titulo"
+    [tableFoot]="tableFoot"
+    (clickedRow)="processClickRow($event)"
+    (editedRow)="processEditRow($event)"
+    (deletedRow)="processDeleteRow($event)"
+  ></app-datatable>
+
+  <app-buttonsbox
+    [leftButtons]="leftButtons"
+    [rightButtons]="rightButtons"
+    (selectedButton)="processButton($event)"
+  ></app-buttonsbox>
+</div>

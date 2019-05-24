@@ -1,0 +1,57 @@
+<div class="container">
+  <app-toolbar [enlaces]="links"></app-toolbar>
+
+  <app-datatable
+    [columnas]="columnas"
+    [mostradas]="mostradas"
+    [dataSource]="dataSource"
+    [titulo]="titulo"
+    [tableFoot]="tableFoot"
+    (clickedRow)="processClickRow($event)"
+    (editedRow)="processEditRow($event)"
+    (deletedRow)="processDeleteRow($event)"
+  ></app-datatable>
+
+  <br />
+  <div class="container-fluid">
+    <div class="md-form">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-1">
+              <label for="form6">Nombre</label>
+            </div>
+            <div class="col-md-10">
+              <input value="" type="text" id="form6" class="form-control" mdbInput />
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md-form">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-1">
+              <label for="form7">Descripción</label>
+            </div>
+            <div class="col-md-10">
+              <textarea type="text" id="form7" class="md-textarea form-control" mdbInput></textarea>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <app-buttonsbox
+    [leftButtons]="leftButtons"
+    [rightButtons]="rightButtons"
+    (selectedButton)="processButton($event)"
+  ></app-buttonsbox>
+</div>

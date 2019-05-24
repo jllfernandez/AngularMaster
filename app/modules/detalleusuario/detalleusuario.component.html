@@ -1,0 +1,151 @@
+<div class="abrir-modal">
+  <div *ngIf="modalService.modal" class="modal" tabindex="-1" role="dialog" style="display: block;" bg-primary>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalle de {{ usuario.NOMBRE }}</h5>
+          <button (click)="closeModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form #validationForm="ngForm">
+              <div class="form-group row">
+                <label for="inputNombre" class="col-sm-2 col-form-label">Login</label>
+                <div class="col-sm-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputLogin"
+                    [(ngModel)]="usuario.LOGIN"
+                    name="LOGIN"
+                    placeholder="LOGIN"
+                    #NOMBRE="ngModel"
+                    required
+                  />
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" class="btn btn-secondary"><img src="assets/img/nodo1.gif" /></button>
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" class="btn btn-secondary"><img src="assets/img/nodo2.gif" /></button>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNombre"
+                    [(ngModel)]="usuario.NOMBRE"
+                    name="NOMBRE"
+                    placeholder="NOMBRE"
+                    #NOMBRE="ngModel"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="inputApellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputApellidos"
+                    #APELLIDOS="ngModel"
+                    [(ngModel)]="usuario.APELLIDOS"
+                    name="apellidos"
+                    placeholder="APELLIDOS"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="inputNif" class="col-sm-2 col-form-label">Nif</label>
+                <div class="col-sm-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNif"
+                    #DNI="ngModel"
+                    [(ngModel)]="usuario.DNI"
+                    name="DNI"
+                    placeholder="DNI"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" />
+                    <label class="form-check-label" for="gridCheck1">
+                      Usuario restringido
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="perfilusuario">Perfil de usuario</label>
+                <div class="col-sm-6">
+                  <select
+                    class="form-control"
+                    id="cboPerfil"
+                    name="PERFIL"
+                    #PERFIL="ngModel"
+                    [(ngModel)]="usuario.PERFIL"
+                    required
+                  >
+                    <option>ADMIN</option>
+                    <option>SUPER USER</option>
+                    <option>USER</option>
+                    <option>INVITADO</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <input type="f" class="form-control-file" id="fff" value="0" />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="perfilusuario">Empresa</label>
+                <div class="col-sm-6">
+                  <input value="" type="text" id="form6" class="form-control" />
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" class="btn btn-secondary"><img src="assets/img/buscar.gif" /></button>
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" class="btn btn-secondary"><img src="assets/img/borrar.gif" /></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button (click)="changePass()" type="button" class="btn btn-primary" data-dismiss="modal">
+            Cambiar contraseña
+          </button>
+
+          <button (click)="aceptar()" type="button" class="btn btn-secondary" data-dismiss="modal">
+            Aceptar
+          </button>
+
+          <button (click)="almacenarCambios()" type="button" class="btn btn-secondary" data-dismiss="modal">
+            Aplicar
+          </button>
+
+          <button (click)="closeModal()" type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
