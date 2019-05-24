@@ -1,0 +1,56 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Usuarios</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de usuarios</h5>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>login</th>
+          <th>Role</th>
+       </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.login }}</td>
+          <td>{{ usuario.role.code }}</td>
+          <td>
+
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>code</th>
+                  <th>Descr</th>
+               </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <!--<tr *ngFor="let cap of usuario.role.capabilityes">-->
+                  <td>1</td>
+                  <td>2</td>
+
+                  <!--
+                  <td>{{ cap.code }}</td>
+                  <td>{{ cap.descr }}</td>
+                -->
+                </tr>
+              </tbody>
+            </table>
+
+
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div>
+  <app-paginador *ngIf="paginador" [paginador]="paginador"></app-paginador>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Brothers</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de Brothers</h5>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>nombre</th>
+          <th>apellido</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let brother of brothers">
+          <td>{{ brother.id }}</td>
+          <td>{{ brother.nombre }}</td>
+          <td>{{ brother.apellido }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

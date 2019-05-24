@@ -1,0 +1,39 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">{{ titulo }}</div>
+  <div class="card-body">
+
+<!--#contactForm="ngForm"-->
+<form (ngSubmit)="onSubmit(contactForm);" #contactForm="ngForm">
+  <div>
+  <input matInput placeholder="Nombre" type="text"  maxlength="80" [(ngModel)]="clienteModel.nombre" name="name" required>
+</div>
+<div>  
+<input matInput placeholder="Email" type="email" [(ngModel)]="clienteModel.email" name="email" required>
+</div>
+<div>  
+<input matInput placeholder="TelÃ©fono requerido"  type="tel" [(ngModel)]="clienteModel.phone" name="Phone" maxlength="16">
+</div>
+<div> 
+<input matInput placeholder="Asunto a tratar" maxlength="60" [(ngModel)]="clienteModel.subject" name="Subject" required>
+</div>
+<div>
+   <textarea matInput placeholder="Mensaje a escribir"  maxlength="300" [(ngModel)]="clienteModel.msn" name="msn" cols="25"></textarea>
+</div>
+<div><button  [disabled]="!contactForm.form.valid" >Enviar</button>
+</div>
+
+<div>
+<button class="btn btn-primary" type="button" role="button" (click)='create()'>Crear</button>
+</div>
+
+<div>
+  <button class="btn btn-primary" type="button" role="button" (click)='prueba()'>Prueba</button>
+  </div>
+  
+</form>
+
+<p>
+  Mensaje {{clienteModel.msn}}
+</p>
+</div>
+</div>

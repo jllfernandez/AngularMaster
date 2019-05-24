@@ -1,0 +1,25 @@
+export const USUARIOS_PAGINADOS: any =
+{
+    "content": [
+        //{ id: 1, nombre: 'Andrés', apellido: 'Guzmán', email: 'profesor@bolsadeideas.com', createAt: '2017-12-11', phone:'1', subject:'a', msn:'as'  },
+        //{ id: 2, nombre: 'Mr. John', apellido: 'Doe', email: 'john.doe@gmail.com', createAt: '2017-11-11', phone:'1', subject:'a', msn:'as'  },
+        //{ id: 3, nombre: 'Linus', apellido: 'Torvalds', email: 'linus.torvalds@gmail.com', createAt: '2017-11-12', phone:'1', subject:'a', msn:'as'  },
+        //{ id: 4, nombre: 'Rasmus', apellido: 'Lerdorf', email: 'rasmus.lerdorf@gmail.com', createAt: '2017-11-13', phone:'1', subject:'a', msn:'as'  },
+        
+        { id: 5, nombre: 'ErichUU', apellido: 'Gamma', email: 'erich.gamma@gmail.com', createAt: '2017-11-14' , phone:'1', subject:'a', msn:'as' },
+        { id: 6, nombre: 'RichardUU', apellido: 'Helm', email: 'richard.helm@gmail.com', createAt: '2017-11-15', phone:'1', subject:'a', msn:'as'  },
+        { id: 7, nombre: 'RalphUU', apellido: 'Johnson', email: 'ralph.johnson@gmail.com', createAt: '2017-11-16', phone:'1', subject:'a', msn:'as'  },
+        { id: 8, nombre: 'BombastoUU', apellido: 'Vlissides', email: 'bombasto.vlissides@gmail.com', createAt: '2017-11-17', phone:'1', subject:'a', msn:'as'  },
+        
+        //{ id: 9, nombre: 'Dr James', apellido: 'Gosling', email: 'james.gosling@gmail.com', createAt: '2017-11-18', phone:'1', subject:'a', msn:'as'  },
+        //{ id: 10, nombre: 'Magma', apellido: 'Lee', email: 'magma.lee@gmail.com', createAt: '2017-11-19', phone:'1', subject:'a', msn:'as'  },
+        //{ id: 11, nombre: 'Tornasol', apellido: 'Roe', email: 'tornado.roe@gmail.com', createAt: '2017-11-20', phone:'1', subject:'a', msn:'as'  }
+
+    ],
+    "first": false,
+    "last": false,
+    "totalPages": 3,
+    "size": 4,
+    "number":1
+}
+
